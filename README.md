@@ -12,7 +12,8 @@
 ## Zusätzlich
 - Whiteboxing
 - Klare übersicht
-- Clean Code Clean Object
+- Clean Code
+- Clean Object
 - Dem nutzer wird feedback gegeben ob er richtig war oder nicht
 
 ## Game
