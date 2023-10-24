@@ -10,6 +10,7 @@ public class Zahlenarten : MonoBehaviour
     public TextMeshProUGUI Zahlen, richtig;
     public int index;
 
+
     private void Start()
     {
         Next();

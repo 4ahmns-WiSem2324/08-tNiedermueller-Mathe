@@ -7,10 +7,10 @@ public class calculator : MonoBehaviour
 {
 
     public InputField input;
-    public int integer_Value_we_Want;
+    public int integerValue;
     public int var1;
     public int var2;
-
+    
     public int ergebnis;
 
     int calcmethod;
@@ -31,12 +31,12 @@ public class calculator : MonoBehaviour
     {
         int.TryParse(input.text, out int result);
 
-        integer_Value_we_Want = result;
+        integerValue = result;
     }
 
     public void plus()
     {
-        var1 = integer_Value_we_Want;
+        var1 = integerValue;
         input.text = "";
 
         calcmethod = 1;
@@ -44,7 +44,7 @@ public class calculator : MonoBehaviour
 
     public void minus()
     {
-        var1 = integer_Value_we_Want;
+        var1 = integerValue;
         input.text = "";
 
         calcmethod = 2;
@@ -52,7 +52,7 @@ public class calculator : MonoBehaviour
 
     public void multiply()
     {
-        var1 = integer_Value_we_Want;
+        var1 = integerValue;
         input.text = "";
 
         calcmethod = 3;
@@ -60,7 +60,7 @@ public class calculator : MonoBehaviour
 
     public void divide()
     {
-        var1 = integer_Value_we_Want;
+        var1 = integerValue;
         input.text = "";
 
         calcmethod = 4;
@@ -68,7 +68,7 @@ public class calculator : MonoBehaviour
 
     public void calculate()
     {
-        var2 = integer_Value_we_Want;
+        var2 = integerValue;
 
         if (calcmethod == 1) ergebnis = var1 + var2;
 

@@ -24,4 +24,9 @@ public class SceneSelection : MonoBehaviour
     {
         SceneManager.LoadScene("Scene4");
     }
+
+    public void Scene5()
+    {
+        SceneManager.LoadScene("Scene5");
+    }
 }

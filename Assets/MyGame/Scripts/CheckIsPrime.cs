@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -26,15 +27,27 @@ public class CheckIsPrime : MonoBehaviour
     public void weitergeben()
     {
         int.TryParse(input.text, out int result);
+        try
+        {
+            int intValue = int.Parse(input.text);
+            Debug.Log(input + " ist ein gültiger Integer. Wert: " + intValue);
+            integer_Value_we_Want = result;
+            isPrime = CalcIsPrime(integer_Value_we_Want);
 
-        integer_Value_we_Want = result;
-
-        isPrime = CalcIsPrime(integer_Value_we_Want);
-
-        if (isPrime) text.text = "Ist eine Primzahl";
+            if (isPrime) text.text = "Ist eine Primzahl";
 
 
-        else if (!isPrime) text.text = "Ist keine Primzahl";
+            else if (!isPrime) text.text = "Ist keine Primzahl";
+        }
+        catch (FormatException)
+        {
+            Debug.LogError(input + " ist kein gültiger Integer.");
+            text.text = "ungültige Eingabe";
+        }
+        
+        
+
+        
     }
 
     public bool CalcIsPrime(int number)
@@ -43,10 +56,10 @@ public class CheckIsPrime : MonoBehaviour
         if (number == 1) return false;
         if (number == 2) return true;
 
-        if (number % 2 == 0) return false; // Even number     
+        if (number % 2 == 0) return false;   
 
         for (int i = 2; i < number; i++)
-        { // Advance from two to include correct calculation for '4'
+        { 
             if (number % i == 0) return false;
         }
 
