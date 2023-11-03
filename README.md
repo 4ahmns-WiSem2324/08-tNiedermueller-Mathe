@@ -7,6 +7,7 @@
 - Zahlenarten erkennen: Ganze Zahlen, Natürliche Zahlen, Gleitkommazahlen erkennen
 - Primzahlen erkennen, durch eingabe überprüfen lassen
 - Einfache Rechenübungen bereitstellt (+-*/)
+- Teilbarkeits Regeln
 - Menü system
 
 ## Zusätzlich
